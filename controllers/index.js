@@ -1,7 +1,7 @@
 const awesomeFunction =
   ("/",
   (req, res) => {
-    res.sendFile("/index.html", { root: __dirname });
+    res.send("<h1>Hello World!</h1>");
   });
 
 const ttech =
@@ -23,3 +23,5 @@ const work =
   });
 
 module.exports = { awesomeFunction, ttech, school, work };
+
+// File("/index.html", { root: __dirname }
