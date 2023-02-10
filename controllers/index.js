@@ -1,7 +1,7 @@
 const awesomeFunction =
   ("/",
   (req, res) => {
-    res.send("<h1>Hello World!</h1>");
+    res.sendFile("/index.html", { root: __dirname });
   });
 
 const ttech =
