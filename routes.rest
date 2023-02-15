@@ -1,0 +1,23 @@
+// Localhost method requests
+###
+GET http://localhost:3001/ HTTP/1.1
+###
+GET http://localhost:3001/ttech HTTP/1.1
+
+### GET ONE STUDENT
+GET http://localhost:3001/students/63ead05b17c90a411e8a9c6a
+
+### GET ALL STUDENTS
+GET http://localhost:3001/students
+
+### POST ONE STUDENT
+POST http://localhost:3001/students HTTP/1.1
+content-type: application/json
+
+{
+  "firstName": "Luke",
+  "lastName": "Walker",
+  "email": "Lwalker@sky.com",
+  "age": 90,
+  "currentCollege": "Jedi Camp 0"
+}
