@@ -1,1 +1,2 @@
-run npm init should be pretty simple i believe. using "_id" to run the update and delete modules
+run npm init should be pretty simple i believe. 
+use @id to run the getOne, update and delete modules.
