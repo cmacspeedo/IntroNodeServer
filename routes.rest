@@ -1,3 +1,6 @@
+// "_id" of student
+@id = 63eee0cc2f89123a96eff8e0
+
 // Localhost method requests
 ###
 GET http://localhost:3001/ HTTP/1.1
@@ -5,19 +8,38 @@ GET http://localhost:3001/ HTTP/1.1
 GET http://localhost:3001/ttech HTTP/1.1
 
 ### GET ONE STUDENT
-GET http://localhost:3001/students/63ead05b17c90a411e8a9c6a
+GET http://localhost:3001/students/{{id}}
 
 ### GET ALL STUDENTS
 GET http://localhost:3001/students
 
-### POST ONE STUDENT
+### CREATE ONE STUDENT
 POST http://localhost:3001/students HTTP/1.1
 content-type: application/json
 
 {
-  "firstName": "Luke",
-  "lastName": "Walker",
-  "email": "Lwalker@sky.com",
-  "age": 90,
-  "currentCollege": "Jedi Camp 0"
+    "firstName": "Luke",
+    "lastName": "Walker",
+    "email": "Lwalker@sky.com",
+    "age": 90,
+    "currentCollege": "Jedi Camp 0"
 }
+
+### UPDATE ONE STUDENT
+PUT http://localhost:3001/students/{{id}} HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Luke",
+    "lastName": "Walker",
+    "email": "Lwalker@sky.com",
+    "age": 90,
+    "currentCollege": "Jedi Camp 1 MILLION"
+}
+
+### DELETE STUDENT
+DELETE  http://localhost:3001/students/{{id}} HTTP/1.1
+content-type: application/json
+
+
+

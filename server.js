@@ -26,8 +26,6 @@ mongodb.initDb((err) => {
   }
 });
 
-// app.listen(PORT, console.log(`Test server running on port: ${PORT}`));
-
 app.use("/", require("./routes"));
 
 module.exports = PORT;

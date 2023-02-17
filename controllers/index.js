@@ -53,8 +53,8 @@ const createStudent = async (req, res) => {
     const response = await mongodb
       .getDb()
       .db()
-      .collection("students")
-      .instertOne(student);
+      .collection("Students")
+      .insertOne(student);
     if (response.acknowledged) {
       res.status(201).json(response);
     } else {
@@ -135,29 +135,3 @@ module.exports = {
   updateStudent,
   deleteStudent,
 };
-
-// const awesomeFunction =
-//   ("/",
-//   (req, res) => {
-//     res.sendFile("/index.html", { root: __dirname });
-//   });
-
-// const ttech =
-//   ("/ttech",
-//   (req, res) => {
-//     res.send(
-//       "<h1>Tooele Tech is Awesome!</h1> <br> <a href='https://intronodeserver2.onrender.com/'>Home</a>"
-//     );
-//   });
-
-// const school =
-//   ("/school",
-//   (req, res) => {
-//     res.send("<h1>Isn't school just great!?</h1>");
-//   });
-
-// const work =
-//   ("/work",
-//   (req, res) => {
-//     res.send("<h1>Work is not so great...</h1>");
-//   });
